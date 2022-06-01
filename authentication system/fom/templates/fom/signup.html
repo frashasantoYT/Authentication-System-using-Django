@@ -1,0 +1,34 @@
+{% extends 'fom/base.html' %}
+{%block content %}
+<form method="POST" class="form-group signup-form">
+    {%csrf_token%}
+    <h1 style="color: white;">Sign up</h1>
+    <div class="mb-3">
+        <label for="username" class="form-label text-muted">Username
+            <input type="text" name="username" class="form-control">
+        </label>
+    </div>
+
+    <div class="mb-3">
+        <label class="text-muted form-label" for="email">Email
+            <input type="email" name="email" class="form-control">
+        </label>
+    </div>
+    <div class="mb-3">
+        <label for="pass1" class="form-label text-muted">Password
+            <input type="password" name="pass1" class="form-control">
+        </label>
+    </div>
+    <div class="mb-3">
+        <label for="pass2" class="form-label text-muted">Confirm Password
+            <input type="password" name="pass2" class="form-control">
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-outline-info">Sign up</button><br>
+    <small class="text-muted">if your have an account? <a href="{% url 'signin' %}">login</a></small>
+</fieldset>
+
+</form>
+
+{%endblock%}

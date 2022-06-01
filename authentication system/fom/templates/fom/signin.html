@@ -1,0 +1,25 @@
+{% extends 'fom/base.html'%}
+{% block content %}
+<fieldset>
+    <form  method="POST" class="login-form form-group">
+        {%csrf_token%}
+        <h1 style="color: white;">login</h1>
+        <div class="mb-3">
+            <label for="username" class="form-label text-muted">Username
+                <input type="text" name="username" class="form-control">
+            </label>
+        </div>
+
+   
+        <div class="mb-3">
+            <label for="pass1" class="form-label text-muted">Password
+                <input type="password" name="pass1" class="form-control">
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-outline-info">Login</button><br>
+        <small class="text-muted">Forgot your password? <a href="#">Reset it here</a></small>
+</fieldset>
+
+</form>
+{%endblock %}
